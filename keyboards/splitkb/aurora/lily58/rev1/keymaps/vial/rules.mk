@@ -3,6 +3,7 @@ ENCODER_MAP_ENABLE = yes
 # Vial setup
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
+VIALRGB_ENABLE =YES
 
 # Saving space on atmega32u4
 ifeq ($(strip $(CONVERT_TO)), )
