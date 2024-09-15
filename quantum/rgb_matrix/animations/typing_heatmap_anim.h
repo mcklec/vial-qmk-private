@@ -59,7 +59,21 @@ bool TYPING_HEATMAP(effect_params_t* params) {
 
     if (params->init) {
         rgb_matrix_set_color_all(0, 0, 0);
+        #if HEATMAP_BACKLIGHT_HSV
+            for (int i = 0; i<RGB_MATRIX_LED_COUNT; i++){
+                HSV backlight_hsv = {HEATMAP_BACKLIGHT_HSV};
+                RGB backlight_rgb = rgb_matrix_hsv_to_rgb(backlight_hsv);
+                if (g_led_config.flags[i] & LED_FLAG_UNDERGLOW){
+                    rgb_matrix_set_color(i, 
+                                        backlight_rgb.r,
+                                        backlight_rgb.g,
+                                        backlight_rgb.b
+                    );
+                }
+            };
+        #endif
         memset(g_rgb_frame_buffer, 0, sizeof g_rgb_frame_buffer);
+
     }
 
     // The heatmap animation might run in several iterations depending on

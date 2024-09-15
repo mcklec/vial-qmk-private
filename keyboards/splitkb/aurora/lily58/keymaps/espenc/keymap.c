@@ -104,25 +104,25 @@ void post_encoder_update_user(uint8_t index, bool clockwise) {
   #endif
 }
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-    case _GAME:
-        rgblight_mode(RGB_MATRIX_SOLID_COLOR);
-        rgblight_sethsv(HSV_GOLD);
-        break;
-    default: //  for any other layers, or the default layer
-        rgb_matrix_mode(RGB_MATRIX_TYPING_HEATMAP);
-        break;
-    }
-  return state;
-};
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//     switch (get_highest_layer(state)) {
+//     case _GAME:
+//         rgblight_mode(RGB_MATRIX_SOLID_COLOR);
+//         rgblight_sethsv(HSV_GOLD);
+//         break;
+//     default: //  for any other layers, or the default layer
+//         rgb_matrix_mode(RGB_MATRIX_TYPING_HEATMAP);
+//         break;
+//     }
+//   return state;
+// };
 
 #ifdef OLED_ENABLE
 bool oled_task_user(void){
 	if (is_keyboard_master()){
         // Renders the current keyboard state (layers and mods)
         render_layer_name();
-        render_sushi();
+        render_logo();
         render_space();
         render_layer_state();
         render_space();
