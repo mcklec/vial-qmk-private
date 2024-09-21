@@ -25,3 +25,11 @@ LIB_SRC+=keymaps/mlec/lib/gaming/gaming_helpers.c
 # CONVERT_TO = liatris
 # promicro
 # BOOTLOADER = caterina
+
+
+
+OPT_DEFS += -DPOINTING_DEVICE_CONFIGURATION_CIRQUE35
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = cirque_pinnacle_i2c
+
+MSG_POINTING_DEVICE = cirque35 touchpad

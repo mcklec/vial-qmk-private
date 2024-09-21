@@ -24,3 +24,15 @@ void check_rgb_timeout(void) {
         is_rgb_timeout = true;
     }
 }
+
+void rgb_layer_action(layer_state_t state){
+    switch (state) {
+    case _GAME:
+        rgblight_mode(RGB_MATRIX_SOLID_COLOR);
+        rgblight_sethsv(HSV_GOLD);
+        break;
+    default: //  for any other layers, or the default layer
+        rgb_matrix_mode(RGB_MATRIX_TYPING_HEATMAP);
+        break;
+    }
+}

@@ -16,16 +16,10 @@
 // OLED Settings
 // #define SPLIT_MODS_ENABLE
 // #define SPLIT_LAYER_STATE_ENABLE
-#define OLED_TIMEOUT 45000 // ms to wait until rgblight time out, 900K ms is 15min.
+#define OLED_TIMEOUT 20000 // ms to wait until rgblight time out, 900K ms is 15min.
 
 
 
 // RGB Settings
 #define RGBLIGHT_SLEEP  // enable rgblight_suspend{} and rgblight_wakeup{} in keymap.c
 #define RGBLIGHT_TIMEOUT 90000  // ms to wait until rgblight time out, 900K ms is 15min.
-
-
-// RGB Animations
-#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP
-#define HEATMAP_BACKLIGHT_HSV 15,255,255
