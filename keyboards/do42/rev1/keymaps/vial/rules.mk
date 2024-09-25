@@ -18,3 +18,5 @@ endif
 # CONVERT_TO = liatris
 # promicro
 # BOOTLOADER = caterina
+
+SERIAL_DRIVER = vendor

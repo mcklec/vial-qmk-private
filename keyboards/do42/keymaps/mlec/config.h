@@ -13,4 +13,3 @@
 #define NKRO_ENABLE
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
-#define MASTER_LEFT

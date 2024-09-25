@@ -16,6 +16,7 @@
 
 #include "quantum.h"
 
+
 #ifdef SWAP_HANDS_ENABLE
 // clang-format off
     __attribute__ ((weak)) const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
@@ -35,3 +36,7 @@
         const uint8_t PROGMEM encoder_hand_swap_config[NUM_ENCODERS] = {1,0};
 #    endif
 #endif
+
+void pointing_device_init_kb(){
+    pointing_device_set_cpi(4000);
+}

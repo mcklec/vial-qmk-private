@@ -8,7 +8,8 @@
         "bootmagic": true,
         "extrakey": true,
         "oled": true,
-        "rgb_matrix": true
+        "rgb_matrix": true,
+        "pointing_device": true
     },
     "layouts": {
         "LAYOUT": {
@@ -102,6 +103,7 @@
         },
         "encoder": {
             "right": {
+                "enabled":true,
                 "rotary": [
                     {"pin_a": "F7", "pin_b": "F6"}
                 ]

@@ -72,25 +72,26 @@
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
-        "rows": ["B4", "B5", "F4", "B3", "F5"],
+        "rows": ["B4", "B5", "F4", "E6", "F5"],
         "cols": ["D3", "D2", "D1", "D4", "C6", "D7"]
     },
     "split": {
+        "enabled":true,
         "bootmagic": {
             "matrix": [5, 0]
         },
         "soft_serial_pin": "D0",
         "matrix_pins": {
             "right": {
-                "rows": ["B4", "B5", "F4", "B3", "F5"],
-                // "cols": ["D3", "D2", "D1", "D4", "C6", "D7"]
+                "rows": ["B4", "B5", "F4", "E6", "F5"],
                 "cols": ["D7", "C6", "D4", "D1", "D2", "D3"]
             }
         },
         "transport": {
             "sync": {
                 "matrix_state": true
-            }
+            },
+            "protocol":"serial"
         },
         "usb_detect": {"enabled": true}
     }
