@@ -4,6 +4,8 @@ ENCODER_MAP_ENABLE = no
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
 VIALRGB_ENABLE = no
+VIAL_INSECURE = yes
+
 
 # Saving space on atmega32u4
 ifeq ($(strip $(CONVERT_TO)), )
